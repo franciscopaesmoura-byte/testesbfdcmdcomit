@@ -1,17 +1,13 @@
 
-function calcprint(){
-    const numb1 = Number(document.getElementById("num1").value);
-    const numb2 = Number(document.getElementById("num2").value);
+function calcprint(x, y) {
 
-    let soma = numb1 + numb2;
-    let sub = numb1 - numb2;
-    let mult = numb1*numb2;
-    let divs = numb1/numb2;
-    let rest = numb1%numb2;
+    let soma = x + y;
+    let sub = x - y;
+    let mult = x * y;
+    let divs = x / y;
+    let rest = x % y;
 
-    const resultados = document.getElementById("result");
 
-    resultados.textContent = "soma"+ " " + soma + " " + "subtração "+sub + " multiplicação "+ mult + " divisão " + divs + "resto" + rest
 
     const somaht = document.getElementById("somaht");
     somaht.textContent = soma
