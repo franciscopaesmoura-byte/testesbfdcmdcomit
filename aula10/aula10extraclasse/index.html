@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Francisco Paes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- MENU LATERAL -->
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="https://i.pinimg.com/736x/8f/4c/a3/8f4ca3b522166db7c8cadff87b2c8968.jpg" alt="Foto de perfil">
+      <h2>Francisco Paes</h2>
+      <p>Desenvolvedor Full Stack</p>
+    </div>
+    <nav>
+      <a href="#sobre"><i class="fas fa-user"></i> Sobre Mim</a>
+      <a href="#formacao"><i class="fas fa-graduation-cap"></i> Formação</a>
+      <a href="#habilidades"><i class="fas fa-code"></i> Habilidades</a>
+      <a href="#softskills"><i class="fas fa-users"></i> Soft Skills</a>
+      <a href="#certificados"><i class="fas fa-certificate"></i> Certificados</a>
+      <a href="#contato"><i class="fas fa-envelope"></i> Contato</a>
+    </nav>
+    <div class="social">
+      <a href="https://github.com/seuusuario" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/seulinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/seuinstagram" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <h1><span id="typed-text"></span></h1>
+      <p>Formando em Análise e Desenvolvimento de Sistemas pelo IFPE, apaixonado por tecnologia, inovação e pessoas.</p>
+      <a href="curriculo.pdf" class="btn" download>📄 Baixar Currículo</a>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>Sou estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de Pernambuco (IFPE). 
+         Atuei como monitor de matemática e desenvolvi experiência em programação, análise de dados e criação de APIs.
+         Além da tecnologia, sou atleta, religioso, disciplinado, esforçado e tenho grande facilidade em lidar com pessoas.</p>
+    </section>
+
+    <!-- FORMAÇÃO -->
+    <section id="formacao">
+      <h2>Formação Acadêmica</h2>
+      <ul>
+        <li><strong>Análise e Desenvolvimento de Sistemas</strong> - IFPE (conclusão em 2025)</li>
+        <li><strong>Bolsa Futuro Digital</strong> - Softex Pernambuco</li>
+      </ul>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades">
+  <h2>Habilidades Técnicas</h2>
+
+  <div class="skills-category">
+    <h3>Frameworks / Bibliotecas</h3>
+    <div class="skills-grid">
+      <span>React</span>
+      <span>React Native</span>
+      <span>Node.js</span>
+      <span>Flask</span>
+      <span>Spring Boot</span>
+    </div>
+  </div>
+
+  <div class="skills-category">
+    <h3>Linguagens de Programação</h3>
+    <div class="skills-grid">
+      <span>JavaScript</span>
+      <span>Java</span>
+      <span>Python</span>
+      <span>C++</span>
+      <span>SQL</span>
+    </div>
+  </div>
+
+  <div class="skills-category">
+    <h3>Ferramentas / Outros</h3>
+    <div class="skills-grid">
+      <span>Git</span>
+      <span>Excel</span>
+      <span>Power BI</span>
+      <span>Word</span>
+      <span>Scrum</span>
+    </div>
+  </div>
+</section>
+
+    <!-- SOFT SKILLS -->
+    <section id="softskills">
+      <h2>Soft Skills</h2>
+      <ul class="soft-list">
+        <li>💬 Comunicação</li>
+        <li>🤝 Trabalho em equipe</li>
+        <li>⚡ Liderança</li>
+        <li>🎯 Foco e disciplina</li>
+        <li>🎭 Humor e leveza no ambiente</li>
+        <li>🚀 Proatividade</li>
+      </ul>
+    </section>
+
+    <!-- CERTIFICADOS -->
+    <section id="certificados">
+  <h2>Certificados</h2>
+  <div class="certificados-container">
+    <div class="certificado-card">
+      <img src="https://i.pinimg.com/736x/bd/68/df/bd68df8b017bb275bb30d2b25651a278.jpg" alt="Certificado 1">
+    </div>
+    <div class="certificado-card">
+      <img src="https://i.pinimg.com/736x/75/0b/a8/750ba85955584eec411616f2e3e463c4.jpg" alt="Certificado 2">
+    </div>
+    <div class="certificado-card">
+      <img src="https://i.pinimg.com/736x/8d/1e/b0/8d1eb03702dd530186d7a7cda7e81ab0.jpg" alt="Certificado 3">
+    </div>
+  </div>
+</section>
+
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>📧 Email: seuemail@gmail.com</p>
+      <p>📱 Telefone: (81) 9 9999-9999</p>
+    </section>
+  </main>
+
+  <!-- SCRIPT PARA EFEITO DIGITAÇÃO -->
+  <script>
+    const text = "Olá, eu sou Francisco Paes 👋";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typed-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
