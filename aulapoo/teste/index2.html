@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastro de carro</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+    <div class="card">
+    <strong>Criar novo carro</strong>
+        <form id="carForm">
+        <label for="marca">Marca</label>
+        <input id="marca" name="marca" type="text" placeholder="ex: Ford" required>
+
+        <label for="modelo">Modelo</label>
+        <input id="modelo" name="modelo" type="text" placeholder="ex: Mustang" required>
+
+        <label for="ano">Ano</label>
+        <input id="ano" name="ano" type="number" placeholder="ex: 2022" required min="1886">
+
+        <button type="submit">Criar carro</button>
+    </form>
+
+    <div id="output"></div>
+  </div>
+        <script src="index.js"></script>
+    </body>
+
+</html>
