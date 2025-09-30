@@ -1,0 +1,244 @@
+/* ======== ESTILO GERAL ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* ======== MENU LATERAL ======== */
+.sidebar {
+    width: 260px;
+    background: #1e293b;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .profile {
+    text-align: center;
+}
+
+.sidebar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #38bdf8;
+    transition: transform 0.3s;
+}
+
+.sidebar img:hover {
+    transform: scale(1.1);
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.sidebar nav {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 12px 0;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+    color: #38bdf8;
+    transform: translateX(5px);
+}
+
+.sidebar .social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.sidebar .social a {
+    font-size: 20px;
+    color: #e2e8f0;
+    transition: 0.3s;
+}
+
+.sidebar .social a:hover {
+    color: #38bdf8;
+}
+
+/* ======== CONTEÚDO PRINCIPAL ======== */
+main {
+    margin-left: 260px;
+    padding: 40px;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h1,
+h2 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+p,
+li {
+    line-height: 1.6;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+/* ======== HABILIDADES ======== */
+.skills-category {
+    margin-bottom: 30px;
+}
+
+.skills-category h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-grid span {
+    background: #1e293b;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #38bdf8;
+    transition: 0.3s;
+    font-weight: 500;
+    cursor: default;
+}
+
+.skills-grid span:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(56, 223, 248, 0.5);
+}
+
+/* ======== SOFT SKILLS ======== */
+.soft-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* ======== CERTIFICADOS ======== */
+/* CERTIFICADOS */
+.certificados-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.certificado-card {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificado-card img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.certificado-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(56, 223, 248, 0.5);
+}
+
+/* Scroll horizontal em telas pequenas */
+@media (max-width: 768px) {
+    .certificados-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    .certificado-card {
+        min-width: 250px;
+        flex: 0 0 auto;
+    }
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    main {
+        margin-left: 0;
+        margin-top: 120px;
+    }
+
+    .soft-list {
+        grid-template-columns: 1fr;
+    }
+}

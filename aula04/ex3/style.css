@@ -1,0 +1,44 @@
+body {
+    background-color: burlywood;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 50px;
+    align-items: center;
+
+}
+
+
+h1 {
+    color: #131c46;
+
+}
+
+h2 {
+    color: #063264;
+
+}
+
+p {
+    color: #1d405c;
+    margin: 20px;
+}
+
+button {
+    color: antiquewhite;
+    background-color: #3c4c8f;
+    border: none;
+    cursor: wait;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color:#000020 ;
+}
+
+.verde {
+    color: greenyellow;
+}
+
+.vermelho {
+    color: red;
+}
